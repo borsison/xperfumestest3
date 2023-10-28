@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script>
+		function result()
+		{
+  			var numOne, numTwo,numThree;
+  			numOne = parseInt(document.getElementById("first").value);
+  			numTwo = parseInt(document.getElementById("second").value);
+  			numThree= parseInt(document.getElementById("third").value);
+
+  			var Roa= numOne *(100- numTwo)/numTwo;
+  			function cusround(answer1,dec){dec=Math.pow(10,dec); return Math.round(Roa*dec)/dec;}
+  			var roundNumber=cusround(Roa,0)
+  			document.getElementById("answer1").value = roundNumber;
+ 
+  			var mixq=numOne + roundNumber;
+  			document.getElementById("answer2").value = mixq;
+
+			var numbott=mixq/numThree;
+ 			function cusround2(answer3,dec){dec=Math.pow(10,dec); return Math.round(numbott*dec)/dec;}
+  			var roundNumber2=cusround2(numbott,1)
+ 			document.getElementById("answer3").value = roundNumber2;
+
+  			var mixq=numOne + roundNumber;
+  			document.getElementById("answer2").value = mixq;
+
+			var numbott=mixq/numThree;
+ 			function cusround2(answer3,dec){dec=Math.pow(10,dec); return Math.round(numbott*dec)/dec;}
+ 			var roundNumber2=cusround2(numbott,1)
+			document.getElementById("answer3").value = roundNumber2;
+		}
+
+	function result_gram()
+		{
+  			var numOne, numTwo,numThree;
+  			numOne = parseInt(document.getElementById("first").value);
+  			numTwo = parseInt(document.getElementById("second").value);
+  			numThree= parseInt(document.getElementById("third").value);
+			numchangeML2G=parseInt(document.getElementById("third").value);
+			
+			var ML2GBottle= numchangeML2G*0.79;
+			function cusroundM2G(answerML2G,dec){dec=Math.pow(10,dec); return Math.round(ML2GBottle*dec)/dec;}
+			var roundNumberML2G=cusroundM2G(ML2GBottle,0)
+			document.getElementById("answerML2G").value = roundNumberML2G;
+
+			var RoaG= 0.79*numOne *(100- numTwo)/numTwo;
+  			function cusround(answer4,dec){dec=Math.pow(10,dec); return Math.round(RoaG*dec)/dec;}
+  			var roundNumber=cusround(RoaG,0)
+  			document.getElementById("answer4").value = roundNumber;
+
+			var mixqG=0.79*(numOne+(numOne*(100-numTwo)/numTwo));
+  			document.getElementById("answer5").value = mixqG;
+
+			var numbott=mixqG/ML2GBottle;
+ 			function cusround2(answer6,dec){dec=Math.pow(10,dec); return Math.round(numbott*dec)/dec;}
+  			var roundNumber2=cusround2(numbott,1)
+ 			document.getElementById("answer6").value = roundNumber2;
+		}
+	</script>
+</head>
+
+<body>
+	<form>
+	<center>
+		<h3>معلوم: الزيت والتركيز وحجم الغرشة ومطلوب كمية الكحول وكمية الخليط وعدد الغرش</h3>
+		<h3><p><input id="first" dir="rtl" style="font-size: 14pt"> ادخل كمية الزيت بالجرام</p><h3>
+		<p><input id="second" dir="rtl" style="font-size: 14pt"> ادخل نسبة التركيز المئوية</p>
+		<p><input id="third" dir="rtl" style="font-size: 14pt"> ادخل حجم الغرشة (الزجاجة) بالمللتر</p>
+		
+
+<p>--------------------------------------------------------------------------------- </p>
+<h4>نتائج القياس بالجرام</h4>
+<p><button onclick="result_gram()" style="font-size: 14pt" type="button"> اضغط لمشاهدة النتائج</button></p>
+
+<p><input id="answerML2G" dir="rtl" style="font-size: 14pt" >سعة الغرشة بالجرام</p>
+<p><input id="answer4" dir="rtl" style="font-size: 14pt" >بالجرام كمية الكحول المطلوبة للخلط</p>
+<p><input id="answer5" dir="rtl" style="font-size: 14pt" >بالجرام كمية خلطة الزيت مع الكحول</p>
+<p><input id="answer6" dir="rtl" style="font-size: 14pt"> عدد الغرش المطلوبة حسب كمية الخلط وسعة الغرشة</p>
+<p>****************************************************************************************</p>
+
+<h4>نتائج القياس بالمليللتر</h4>
+<p><button onclick="result()" style="font-size: 14pt" type="button"> اضغط لمشاهدة النتائج</button></p>
+
+<p><input id="answer1" dir="rtl" style="font-size: 14pt" > كمية الكحول المطلوبة للخلط</p>
+<p><input id="answer2" dir="rtl" style="font-size: 14pt" > كمية خلطة الزيت مع الكحول</p>
+<p><input id="answer3" dir="rtl" style="font-size: 14pt"> عدد الغرش المطلوبة حسب كمية الخلط وحجم الغرشة</p>
+<p>/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////</p>
+</form>
+</center>
+</body>
+
+<script>
+document.getElementById("first").setAttribute('size', '6');
+document.getElementById("second").setAttribute('size', '6');
+document.getElementById("third").setAttribute('size', '6');	
+
+document.getElementById("answer1").setAttribute('size', '6');
+document.getElementById("answer2").setAttribute('size', '6');
+document.getElementById("answer3").setAttribute('size', '6');
+document.getElementById("answer4").setAttribute('size', '6');
+document.getElementById("answer5").setAttribute('size', '6');
+document.getElementById("answer6").setAttribute('size', '6');
+document.getElementById("answerML2G").setAttribute('size', '6');
+</script>
+
+</html>
+
